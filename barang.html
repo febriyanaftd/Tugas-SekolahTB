@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Madam Gie</title>
+    <style>
+        body{
+            background-color: lightpink;
+        }
+        .container{
+            width: 900px;
+        }
+    </style>
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQc8tEXbnGVJUMd9DrWb-wIbgVBajt5sH5atA&usqp=CAU" width="250px" alt='ini gambar'></img></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <thead>
+        
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="pupel.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="produk.html"><strong>Barang</strong></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="barang.html"><strong>From</strong></a>
+          </li>
+        </div>
+      </nav>
+    </html>
+    </body><br>
+
+    <center><h4>Ayo input produk yang anda beli!</h4></center>
+   
+ <div class="container mt-4 border border-red rounded bg-red" style="background-color:rgb(179, 187, 192);">
+    <center><font color="black" face="monotype corsiva"></font><h3>~~~ Form Input Produk ~~~</h3></font></center>
+    <form name="pembeli">
+                            <div class="form-group row">
+                                <label for="kode" class="col-sm-2 col-form-label">Nama Pembeli</label>
+                                <div class="col-sm-9">
+                                <input type="text" class="form-control" name="nama" id="namapembeli">
+                            </div>
+                        </div>
+    
+                        <td>
+                            <div class="form-group row">
+                                <label for="satuan" class="col-sm-2 col-form-label">Nama Produk</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="barang">
+                                        <option value="Madame Gie Beauty Shape Browcara - MakeUp Mascara Alis">Madame Gie Beauty Shape Browcara - MakeUp Mascara Alis</option>
+                                        <option value="Madame Gie Madame To Go - Face Pallete">Madame Gie Madame To Go - Face Pallete</option>
+                                        <option value="Madame Gie Sweet Cheek Blushed - Blush On">Madame Gie Sweet Cheek Blushed - Blush On</option>
+                                        <option value="Madame Gie Always On Lip Cream - MakeUp Lip Cream Lipstik">Madame Gie Always On Lip Cream - MakeUp Lip Cream Lipstik</option>
+                                        <option value="Madame Gie Eyeshadow Sensous Drama Queen">Madame Gie Eyeshadow Sensous Drama Queen</option>
+                                        <option value="Madame Gie Brilliant Glaze Lip Liquide - Lip Gloss">Madame Gie Brilliant Glaze Lip Liquide - Lip Gloss</option>
+                                        <option value="Madame Gie Total Cover BB Femme Cushion">Madame Gie Total Cove BB Femme Cushion</option>
+                                        <option value="Madame Gie Nail Moji Set Nail">Madame Gie Nail Moji Set Nail - Blush On</option>
+                                        <option value="Madame Gie BB Femme Foundation Liquid">Madame Gie BB Femme Foundation Liquid</option>
+                                        <option value="Madame Gie Madame Says Clean Cleansing Water Cleansing Water">Madame Gie Madame Says Clean Cleansing Water Cleansing Water</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                            <div class="form-group row">
+                                <label for="stock" class="col-sm-2 col-form-label">Harga Produk</label>
+                                <div class="col-sm-9">
+                                <input type="text" class="form-control" id="price">
+                            </div>
+                        </div>
+            
+                        <div class="form-group row">
+                            <label for="nama" class="col-sm-2 col-form-label">Jumlah Beli</label>
+                            <div class="col-sm-9">
+                            <input type="number" class="form-control" name="jumlahbarang" id="qty_request">
+                        </div>
+                    </div>
+        
+                    <div class="form-group row mt-3">
+                        <label for="url" class="col-sm-2 col-form-label">Pembayaran</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" name="inputbayar" id="uang_tunai">
+                    </div>
+                </div>
+    
+                <button type="button" class="btn bg-dark text-white mt-2" onclick="hitungtotal()">Total Pembayaran</button>
+    
+                        <div class="form-group row mt-3">
+                            <label for="nama" class="col-sm-2 col-form-label">Total</label>
+                            <div class="col-sm-9">                    
+                            <input readonly class="form-control" type="text" name="harga" id="harga">
+                        </div>
+                    </div>
+    
+                <button type="button" class="btn bg-dark text-white mt-2" value="Bayar" id="uangdiberikan" onclick="hitungkembalian()">Total Kembalian</button>
+            
+                        <div class="form-group row mt-4">
+                            <label for="url" class="col-sm-2 col-form-label">Kembalian</label>
+                            <div class="col-sm-9">
+                            <input type="text" readonly class="form-control" id="kembalian">
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                    <div class="col-sm">
+                    <button type="button" class="btn btn-primary text-black mt-2" value="Beli" onclick="simpan()">Beli Sekarang</button> 
+                                </div>
+                            </div>
+            <!-- output -->
+                <div class="card-header text-white text-center mt-4" style="background-color:rgb(146, 146, 172)"><b>Output Hasil</b></div>
+                <div class="card-body" style="background-color: rgb(188, 209, 214);">
+                    <table class="table table-borderless" id="hasil">
+    
+                        <div class="form-group row mt-3">
+                            <label for="url" class="col-sm-2 col-form-label">Nama Pembeli</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nama_pembeli" disabled>
+                        </div>
+                    </div>
+    
+    <div class="form-group row mt-3">
+                        <label for="url" class="col-sm-2 col-form-label">Nama Produk</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="nama_barang" disabled>
+                    </div>
+                </div>
+    
+                    <div class="form-group row mt-3">
+                        <label for="url" class="col-sm-2 col-form-label">Harga Produk</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="qty" disabled>
+                    </div>
+                </div>
+    
+                    <div class="form-group row mt-3">
+                        <label for="url" class="col-sm-2 col-form-label">Jumlah Beli</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="total_harga_barang" disabled>
+                    </div>
+                </div>
+    
+                    <div class="form-group row mt-3">
+                        <label for="url" class="col-sm-2 col-form-label">Pembayaran</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="dibayar" disabled>
+                    </div>
+                </div>
+    
+                    <div class="form-group row mt-3">
+                        <label for="url" class="col-sm-2 col-form-label">Kembalian</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="hasil_kembalian" disabled>
+                    </div>
+                </div>
+                <button class="btn btn-warning text-black text-center"  type="reset" value="Hapus">Hapus Data</button> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </body>
+    </html>
+    <script>
+    
+        // looping and render data product to list table
+        var select = document.getElementById("tableListProduct");
+        var html = '';
+        listProduct.forEach(loopProduct);
+    
+        function loopProduct(item, index) {
+            html += "<tr>";
+            html += "<td>" + item.name + "</td>";
+            html += "<td>" + item.price + "</td>";
+            html += "<td>" + "<button type='button' class='btn btn-primary' onclick='selectedProduct(" + JSON.stringify(
+                    item) +
+                ")'>+</button>" +
+                "</td>";
+        }
+        select.innerHTML = html;
+        // end  looping and render data product to list table
+    
+    
+        // select product
+        function selectedProduct(params) {
+            $("#barang").val(params.name);
+            $("#price").val(params.price);
+            $('#Mproduct').modal('hide');
+        }
+    
+        // hitung harga total
+        function hitungtotal() {
+            var form = document.pembeli;
+            var harga = $("#price").val();
+            // var nmbarang = form.pilihbarang.value;
+            var nmbarang = $("#barang").val();
+            var jumlahbeli = eval(form.jumlahbarang.value);
+    
+            // logika penentu diskon
+            if (jumlahbeli >= 3) {
+                var disc = 0.20 * harga;
+            } else if (jumlahbeli < 3 && jumlahbeli >= 3) {
+                var disc = 0.08 * harga;
+            } else {
+                var disc = 0;
+            }
+            // end logika penentuan diskon
+    
+            var total_harga = harga * jumlahbeli;
+            var harga = total_harga - disc;
+            $('#harga').val(harga);
+            // render harga
+        }
+        // end hitung harga total
+    
+        function simpan() {
+            var nama_pembeli = $("#namapembeli").val();
+            var nama_barang = $("#barang").val();
+            var qty_request = $("#qty_request").val();
+            var total_harga = $("#harga").val();
+            var uang_tunai = $("#uang_tunai").val();
+            var kembalian = $("#kembalian").val();
+            $("#nama_pembeli").val(nama_pembeli);
+            $("#nama_barang").val(nama_barang);
+            $("#qty").val(qty_request);
+            $("#total_harga_barang").val(total_harga);
+            $("#dibayar").val(uang_tunai);
+            $("#hasil_kembalian").val(kembalian);
+        }
+    
+        // function hitungkembalian(params)
+    
+    function hitungkembalian() {
+            var bayar = $("#uang_tunai").val();
+            var total_harga = $("#harga").val();
+            var hitung_kembali = bayar - total_harga;
+            $("#kembalian").val(hitung_kembali);
+            // var total = (document.pembeli.inputtotal.value);
+            // var uangbayar = (document.forminput.inputbayar.value);
+            // var kembalian = 0.0;
+    
+            // kembalian = uangbayar - total;
+    
+            // document.forminput.inputkembalian.value = eval(kembalian);
+        }
+        </script>
+    <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+            <center><small><h>Madame Gie</h></small></center>
+  <center><small><h>Contact febriyanaftd03@gmail.com | 089663471717</h></small></center><br>
+        </body>
+    </html>
